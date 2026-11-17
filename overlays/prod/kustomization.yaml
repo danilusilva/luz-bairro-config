@@ -7,18 +7,10 @@ namespace: cicd-proddn7
 resources:
   - ../../base
 
-components:
-  - ../../components/canary
-
 # Producao NAO e construida: usa a MESMA imagem de dev, identificada pelo digest.
 # O digest (e APP_VERSION) so mudam por pull request de promocao (config/scripts/promover.sh).
-# TODO(aluno): em newName, troque cicd-dev pelo seu projeto de DESENVOLVIMENTO ($DEV_NS),
-# porque e la que o pipeline publica a imagem.
 images:
   - name: luz-bairro
-    newName: image-registry.openshift-image-registry.svc:5000/cicd-devdn7/luz-bairro
-    digest: sha256:bdb757870c6bcad75dfd3739525a2eac93f0f36afbf041b020aff0907e1175e1
-  - name: luz-bairro-canary
     newName: image-registry.openshift-image-registry.svc:5000/cicd-devdn7/luz-bairro
     digest: sha256:1a29e0eedd3ca85e17766b24df1fadcfb6d907cf4ad25d43fb71ac9ac3136740
 
@@ -28,7 +20,7 @@ configMapGenerator:
     literals:
       - APP_MESSAGE=Portal Luz do Bairro - PRODUCAO
       - APP_ENV=prod
-      - APP_VERSION=cd1d1e1
+      - APP_VERSION=2fa1aca
 
 patches:
   - target:
