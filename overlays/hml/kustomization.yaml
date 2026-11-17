@@ -3,7 +3,7 @@ kind: Kustomization
 
 # Ambiente de homologacao: usado apenas no Incidente D do Exercicio 9.
 # TODO(aluno, Incidente D): troque cicd-hml pelo seu projeto de homologacao ($HML_NS).
-namespace: cicd-hmldn7
+namespace: cicd-hmldn7-d
 
 resources:
   - ../../base
