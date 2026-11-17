@@ -27,9 +27,8 @@ spec:
           env:
             # "env" tem precedencia sobre "envFrom": o canary informa a PROPRIA versao,
             # o que permite distinguir as duas versoes ao amostrar a Route.
-            # TODO(aluno): troque pelo APP_VERSION (SHA curto) da versao que esta testando.
             - name: APP_VERSION
-              value: "canary"
+              value: "2fa1aca"
           readinessProbe:
             httpGet:
               path: /readyz
