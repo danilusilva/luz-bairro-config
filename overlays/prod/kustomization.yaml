@@ -13,7 +13,7 @@ resources:
 # porque e la que o pipeline publica a imagem.
 images:
   - name: luz-bairro
-    newName: image-registry.openshift-image-registry.svc:5000/cicd-dev/luz-bairro
+    newName: image-registry.openshift-image-registry.svc:5000/cicd-devdn7/luz-bairro
     digest: sha256:bdb757870c6bcad75dfd3739525a2eac93f0f36afbf041b020aff0907e1175e1
 
 configMapGenerator:
