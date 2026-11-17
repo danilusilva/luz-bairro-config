@@ -18,10 +18,10 @@ patches:
     patch: |-
       - op: replace
         path: /spec/to/weight
-        value: 90
+        value: 50
       - op: add
         path: /spec/alternateBackends
         value:
           - kind: Service
             name: luz-bairro-canary
-            weight: 10
+            weight: 50
