@@ -12,11 +12,11 @@ resources:
 images:
   - name: luz-bairro
     newName: image-registry.openshift-image-registry.svc:5000/cicd-devdn7/luz-bairro
-    digest: sha256:bdb757870c6bcad75dfd3739525a2eac93f0f36afbf041b020aff0907e1175e1
+    digest: sha256:1a29e0eedd3ca85e17766b24df1fadcfb6d907cf4ad25d43fb71ac9ac3136740
 
 configMapGenerator:
   - name: luz-bairro-config
     behavior: merge
     literals:
       - APP_ENV=dev
-      - APP_VERSION=cd1d1e1
+      - APP_VERSION=2fa1aca
