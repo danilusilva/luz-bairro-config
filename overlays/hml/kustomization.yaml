@@ -3,7 +3,7 @@ kind: Kustomization
 
 # Ambiente de homologacao: usado apenas no Incidente D do Exercicio 9.
 # TODO(aluno, Incidente D): troque cicd-hml pelo seu projeto de homologacao ($HML_NS).
-namespace: cicd-hmldn7
+namespace: cicd-hmldn7-d
 
 resources:
   - ../../base
@@ -14,7 +14,7 @@ resources:
 images:
   - name: luz-bairro
     newName: image-registry.openshift-image-registry.svc:5000/cicd-devdn7/luz-bairro
-    digest: sha256:0000000000000000000000000000000000000000000000000000000000000000
+    digest: sha256:1a29e0eedd3ca85e17766b24df1fadcfb6d907cf4ad25d43fb71ac9ac3136740
 
 configMapGenerator:
   - name: luz-bairro-config
@@ -22,4 +22,4 @@ configMapGenerator:
     literals:
       - APP_MESSAGE=Portal Luz do Bairro - HOMOLOGACAO
       - APP_ENV=hml
-      - APP_VERSION=0000000
+      - APP_VERSION=2fa1aca
